@@ -25,7 +25,13 @@
     <module>webapp</module>
     <module>spring-boot-vaadin-adapter-starter</module>
     <module>domain</module>
+    <module>vaadin-widget-public</module>
   </modules>
+
+  <properties>
+    <java.version>21</java.version>
+    <vaadin.version>24.3.7</vaadin.version>
+  </properties>
 
   <dependencyManagement>
     <dependencies>

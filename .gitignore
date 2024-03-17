@@ -10,6 +10,7 @@ target
 
 # The following files are generated/updated by vaadin-maven-plugin
 node_modules/
+./frontend
 webapp/frontend/generated/
 pnpmfile.js
 vite.generated.ts

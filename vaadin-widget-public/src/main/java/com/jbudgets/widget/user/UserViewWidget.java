@@ -1,6 +1,6 @@
 package com.jbudgets.widget.user;
 
-import com.jbudgets.TestService;
+import com.jbudgets.domain.TestService;
 import com.jbudgets.domain.user.User;
 import com.jbudgets.widget.Purpose;
 import com.jbudgets.widget.Source;
