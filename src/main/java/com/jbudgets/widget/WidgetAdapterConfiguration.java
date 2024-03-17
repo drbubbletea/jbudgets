@@ -20,7 +20,6 @@ import java.util.Map;
 import java.util.Set;
 
 @Configuration
-//public class WidgetAdapterConfiguration implements BeanDefinitionRegistryPostProcessor {
 public class WidgetAdapterConfiguration {
 
     private static final Logger LOG = LoggerFactory.getLogger(WidgetAdapterConfiguration.class);
