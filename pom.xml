@@ -15,6 +15,12 @@
   <packaging>pom</packaging>
   <version>0.0.1-SNAPSHOT</version>
 
+  <licenses>
+    <license>
+      <name>MIT</name>
+    </license>
+  </licenses>
+
   <modules>
     <module>webapp</module>
     <module>spring-boot-vaadin-adapter-starter</module>
