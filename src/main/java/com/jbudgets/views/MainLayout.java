@@ -28,14 +28,10 @@ public class MainLayout extends AppLayout {
     private H2 viewTitle;
 
     @Inject
-    public MainLayout(DomainFactory domainFactory, WidgetAdapter adapter) {
+    public MainLayout(DomainFactory domainFactory) {
         setPrimarySection(Section.DRAWER);
         addDrawerContent();
         addHeaderContent();
-        User user = domainFactory.create();
-
-        Widget widget = adapter.adapt(user, WidgetPurpose.VIEW).get();
-
     }
 
     private void addHeaderContent() {
