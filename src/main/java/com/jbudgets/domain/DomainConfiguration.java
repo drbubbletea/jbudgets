@@ -1,0 +1,17 @@
+package com.jbudgets.domain;
+
+import com.jbudgets.domain.impl.DefaultUser;
+import org.springframework.beans.factory.config.ConfigurableBeanFactory;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Scope;
+
+@Configuration
+public class DomainConfiguration {
+
+    @Bean
+    @Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
+    public DefaultUser user() {
+        return new DefaultUser();
+    }
+}

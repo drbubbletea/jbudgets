@@ -1,6 +1,11 @@
 package com.jbudgets.views;
 
+import com.jbudgets.domain.User;
+import com.jbudgets.domain.DomainFactory;
 import com.jbudgets.views.myview.MyViewView;
+import com.jbudgets.widget.Widget;
+import com.jbudgets.widget.adapter.WidgetAdapter;
+import com.jbudgets.widget.adapter.WidgetPurpose;
 import com.vaadin.flow.component.applayout.AppLayout;
 import com.vaadin.flow.component.applayout.DrawerToggle;
 import com.vaadin.flow.component.html.Footer;
@@ -12,6 +17,7 @@ import com.vaadin.flow.component.sidenav.SideNav;
 import com.vaadin.flow.component.sidenav.SideNavItem;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.theme.lumo.LumoUtility;
+import jakarta.inject.Inject;
 import org.vaadin.lineawesome.LineAwesomeIcon;
 
 /**
@@ -21,10 +27,15 @@ public class MainLayout extends AppLayout {
 
     private H2 viewTitle;
 
-    public MainLayout() {
+    @Inject
+    public MainLayout(DomainFactory domainFactory, WidgetAdapter adapter) {
         setPrimarySection(Section.DRAWER);
         addDrawerContent();
         addHeaderContent();
+        User user = domainFactory.create();
+
+        Widget widget = adapter.adapt(user, WidgetPurpose.VIEW).get();
+
     }
 
     private void addHeaderContent() {
