@@ -7,11 +7,11 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>spring-boot-vaadin-adapter-starter</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <artifactId>domain</artifactId>
     <packaging>jar</packaging>
+    <version>0.0.1-SNAPSHOT</version>
 
-    <name>spring-boot-vaadin-adapter-starter</name>
+    <name>domain</name>
 
     <dependencies>
         <dependency>
@@ -21,12 +21,6 @@
         <dependency>
             <groupId>jakarta.inject</groupId>
             <artifactId>jakarta.inject-api</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.vaadin</groupId>
-            <artifactId>flow-server</artifactId>
-            <version>1.0.0</version>
-            <scope>provided</scope>
         </dependency>
     </dependencies>
 </project>

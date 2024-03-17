@@ -1,11 +1,7 @@
 package com.jbudgets.views;
 
-import com.jbudgets.domain.User;
 import com.jbudgets.domain.DomainFactory;
 import com.jbudgets.views.myview.MyViewView;
-import com.jbudgets.widget.Widget;
-import com.jbudgets.widget.adapter.WidgetAdapter;
-import com.jbudgets.widget.adapter.WidgetPurpose;
 import com.vaadin.flow.component.applayout.AppLayout;
 import com.vaadin.flow.component.applayout.DrawerToggle;
 import com.vaadin.flow.component.html.Footer;

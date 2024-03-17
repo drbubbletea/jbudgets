@@ -1,7 +1,7 @@
 package com.jbudgets.views.myview;
 
 import com.jbudgets.domain.DomainFactory;
-import com.jbudgets.domain.User;
+import com.jbudgets.domain.user.User;
 import com.jbudgets.views.MainLayout;
 import com.jbudgets.widget.Widget;
 import com.jbudgets.widget.adapter.WidgetAdapter;

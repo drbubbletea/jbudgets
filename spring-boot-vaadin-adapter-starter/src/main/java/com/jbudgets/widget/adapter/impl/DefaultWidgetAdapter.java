@@ -25,7 +25,6 @@ public class DefaultWidgetAdapter implements WidgetAdapter {
     // TODO: caching the creator from a source class and purpose may be a good addition here
     @Override
     public Optional<Widget> adapt(Object source, WidgetPurpose purpose) {
-        LOG.info("Called");
         WidgetForCreator creator = null;
 
         // TODO: room for optimization here. may be a way to specify candidates but not resolve function calls until necessary

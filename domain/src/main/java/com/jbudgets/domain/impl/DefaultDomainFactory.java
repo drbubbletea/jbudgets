@@ -1,12 +1,12 @@
 package com.jbudgets.domain.impl;
 
-import com.jbudgets.domain.User;
+import com.jbudgets.domain.user.User;
 import com.jbudgets.domain.DomainFactory;
+import com.jbudgets.domain.user.impl.DefaultUser;
 import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Component;
 
 
-@Component
 public class DefaultDomainFactory implements DomainFactory {
 
     private final ApplicationContext context;
