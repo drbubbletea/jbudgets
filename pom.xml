@@ -17,5 +17,6 @@
 
   <modules>
     <module>webapp</module>
+    <module>spring-boot-vaadin-adapter-starter</module>
   </modules>
 </project>

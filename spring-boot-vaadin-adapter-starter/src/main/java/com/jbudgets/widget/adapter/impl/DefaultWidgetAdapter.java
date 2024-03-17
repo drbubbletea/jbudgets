@@ -4,11 +4,8 @@ import com.jbudgets.widget.Widget;
 import com.jbudgets.widget.WidgetForCreator;
 import com.jbudgets.widget.adapter.WidgetAdapter;
 import com.jbudgets.widget.adapter.WidgetPurpose;
-import jakarta.inject.Inject;
-import org.apache.commons.lang3.time.StopWatch;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.Arrays;
