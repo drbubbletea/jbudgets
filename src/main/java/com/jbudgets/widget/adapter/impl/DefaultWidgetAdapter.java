@@ -5,10 +5,14 @@ import com.jbudgets.widget.WidgetForCreator;
 import com.jbudgets.widget.adapter.WidgetAdapter;
 import com.jbudgets.widget.adapter.WidgetPurpose;
 import jakarta.inject.Inject;
+import org.apache.commons.lang3.time.StopWatch;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
@@ -21,28 +25,30 @@ public class DefaultWidgetAdapter implements WidgetAdapter {
         this.sourcePurposeWidgetMap = sourcePurposeWidgetMap;
     }
 
-    // TODO: caching the creator from a source class and purpose would be a good addition here
+    // TODO: caching the creator from a source class and purpose may be a good addition here
     @Override
     public Optional<Widget> adapt(Object source, WidgetPurpose purpose) {
         LOG.info("Called");
         WidgetForCreator creator = null;
-        // source class
-        creator = findCreator(source.getClass(), purpose);
-        if (null == creator) {
-            LOG.info("Did not find class for {}", source.getClass());
-        }
-        // try interfaces?
-        for (Class<?> classInterface: source.getClass().getInterfaces()) {
-            creator = findCreator(classInterface, purpose);
+
+        // TODO: room for optimization here. may be a way to specify candidates but not resolve function calls until necessary
+        List<Class<?>> candidateClasses = new ArrayList<>();
+        candidateClasses.add(source.getClass());
+        candidateClasses.addAll(Arrays.asList(source.getClass().getInterfaces()));
+        candidateClasses.add(source.getClass().getSuperclass());
+        candidateClasses.addAll(Arrays.asList(source.getClass().getSuperclass().getInterfaces()));
+
+        for (Class<?> candidate: candidateClasses) {
+            creator = findCreator(candidate, purpose);
             if (null != creator) {
                 break;
             }
         }
+
         return Optional.of(creator.create(source));
     }
 
     private WidgetForCreator findCreator(Class<?> sourceClass, WidgetPurpose purpose) {
-        LOG.info("Checking for source class {}", sourceClass);
         if (sourcePurposeWidgetMap.containsKey(sourceClass)) {
             Map<WidgetPurpose, WidgetForCreator> creators = sourcePurposeWidgetMap.get(sourceClass);
             if (creators.containsKey(purpose)) {
@@ -51,7 +57,6 @@ public class DefaultWidgetAdapter implements WidgetAdapter {
                 return creators.get(WidgetPurpose.DEFAULT);
             }
         }
-        LOG.info("... did not find creator");
         return null;
     }
 }
