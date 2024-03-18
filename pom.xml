@@ -26,6 +26,7 @@
     <module>spring-boot-vaadin-adapter-starter</module>
     <module>domain</module>
     <module>vaadin-widget-public</module>
+      <module>domain-dal</module>
   </modules>
 
   <properties>

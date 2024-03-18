@@ -13,7 +13,6 @@ import org.springframework.context.annotation.Scope;
 public class DomainConfiguration {
 
     @Bean
-    @Singleton
     public TestService testService() {
         return new TestService();
     }
