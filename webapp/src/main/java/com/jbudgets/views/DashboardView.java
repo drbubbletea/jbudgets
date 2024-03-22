@@ -1,8 +1,8 @@
-package com.jbudgets.views.myview;
+package com.jbudgets.views;
 
-import com.jbudgets.domain.DomainFactory;
+import com.jbudgets.domain.user.CurrentUserProvider;
 import com.jbudgets.domain.user.User;
-import com.jbudgets.views.MainLayout;
+import com.jbudgets.MainLayout;
 import com.jbudgets.widget.Widget;
 import com.jbudgets.widget.adapter.WidgetAdapter;
 import com.jbudgets.widget.adapter.WidgetPurpose;
@@ -15,22 +15,20 @@ import com.vaadin.flow.router.Route;
 import com.vaadin.flow.router.RouteAlias;
 import jakarta.inject.Inject;
 
-@PageTitle("My View")
-@Route(value = "my-view", layout = MainLayout.class)
+//@PageTitle("My View")
+@Route(value = "dashboard", layout = MainLayout.class)
 @RouteAlias(value = "", layout = MainLayout.class)
 @Uses(Icon.class)
-public class MyViewView extends Composite<VerticalLayout> {
+public class DashboardView extends Composite<VerticalLayout> {
 
     @Inject
-    public MyViewView(DomainFactory domainFactory, WidgetAdapter adapter) {
-        User user = domainFactory.create();
+    public DashboardView(CurrentUserProvider userProvider, WidgetAdapter adapter) {
+        getContent().setWidth("100%");
+        getContent().getStyle().set("flex-grow", "1");
+        User user = userProvider.get();
 
         Widget widget = adapter.adapt(user, WidgetPurpose.VIEW).get();
         getContent().add(widget.get());
-    }
 
-    public MyViewView() {
-        getContent().setWidth("100%");
-        getContent().getStyle().set("flex-grow", "1");
     }
 }

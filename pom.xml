@@ -27,6 +27,7 @@
     <module>domain</module>
     <module>vaadin-widget-public</module>
       <module>domain-dal</module>
+      <module>lib-foundation</module>
   </modules>
 
   <properties>
@@ -40,6 +41,11 @@
         <groupId>jakarta.inject</groupId>
         <artifactId>jakarta.inject-api</artifactId>
         <version>2.0.1</version>
+      </dependency>
+      <dependency>
+        <groupId>org.javamoney.moneta</groupId>
+        <artifactId>moneta-core</artifactId>
+        <version>1.4.4</version>
       </dependency>
     </dependencies>
   </dependencyManagement>

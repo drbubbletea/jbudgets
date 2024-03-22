@@ -5,9 +5,15 @@ import com.jbudgets.domain.workspace.WorkspaceId;
 import com.jbudgets.domain.workspace.budget.Budget;
 
 public class DefaultWorkspace implements Workspace {
+
+    private final WorkspaceId id;
+
+    public DefaultWorkspace(WorkspaceId id) {
+        this.id = id;
+    }
     @Override
     public WorkspaceId id() {
-        return null;
+        return id;
     }
 
     @Override

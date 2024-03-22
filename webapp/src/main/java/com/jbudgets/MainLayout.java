@@ -1,7 +1,8 @@
-package com.jbudgets.views;
+package com.jbudgets;
 
-import com.jbudgets.domain.DomainFactory;
-import com.jbudgets.views.myview.MyViewView;
+import com.jbudgets.views.BudgetsView;
+import com.jbudgets.views.DashboardView;
+import com.jbudgets.views.TransactionsView;
 import com.vaadin.flow.component.applayout.AppLayout;
 import com.vaadin.flow.component.applayout.DrawerToggle;
 import com.vaadin.flow.component.html.Footer;
@@ -24,7 +25,7 @@ public class MainLayout extends AppLayout {
     private H2 viewTitle;
 
     @Inject
-    public MainLayout(DomainFactory domainFactory) {
+    public MainLayout() {
         setPrimarySection(Section.DRAWER);
         addDrawerContent();
         addHeaderContent();
@@ -41,7 +42,7 @@ public class MainLayout extends AppLayout {
     }
 
     private void addDrawerContent() {
-        H1 appName = new H1("My App");
+        H1 appName = new H1("JBudgets");
         appName.addClassNames(LumoUtility.FontSize.LARGE, LumoUtility.Margin.NONE);
         Header header = new Header(appName);
 
@@ -53,7 +54,9 @@ public class MainLayout extends AppLayout {
     private SideNav createNavigation() {
         SideNav nav = new SideNav();
 
-        nav.addItem(new SideNavItem("My View", MyViewView.class, LineAwesomeIcon.PENCIL_RULER_SOLID.create()));
+        nav.addItem(new SideNavItem("Dashboard", DashboardView.class, LineAwesomeIcon.HOME_SOLID.create()));
+        nav.addItem(new SideNavItem("Budgets", BudgetsView.class, LineAwesomeIcon.TAGS_SOLID.create()));
+        nav.addItem(new SideNavItem("Transactions", TransactionsView.class, LineAwesomeIcon.MONEY_BILL_SOLID.create()));
 
         return nav;
     }

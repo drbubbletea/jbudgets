@@ -5,17 +5,21 @@ import com.jbudgets.domain.workspace.budget.BudgetId;
 
 public class DefaultBudget implements Budget {
 
-    public DefaultBudget() {
+    private final BudgetId id;
+    private final String name;
 
+    public DefaultBudget(BudgetId id, String name) {
+        this.id = id;
+        this.name = name;
     }
     @Override
     public BudgetId id() {
-        return null;
+        return id;
     }
 
     @Override
     public String name() {
-        return null;
+        return name;
     }
 
     @Override

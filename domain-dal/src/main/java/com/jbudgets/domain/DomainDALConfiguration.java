@@ -12,6 +12,7 @@ import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
+import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 
 @Configuration
 public class DomainDALConfiguration {
@@ -22,8 +23,8 @@ public class DomainDALConfiguration {
     }
 
     @Bean
-    public DBBudgetRepository dbBudgetRepository() {
-        return new DBBudgetRepository();
+    public DBBudgetRepository dbBudgetRepository(NamedParameterJdbcTemplate template, BudgetFactory factory) {
+        return new DBBudgetRepository(template, factory);
     }
 
     @Bean
@@ -52,8 +53,8 @@ public class DomainDALConfiguration {
     }
 
     @Bean
-    public DBWorkspaceRepository dbWorkspaceRepository() {
-        return new DBWorkspaceRepository();
+    public DBWorkspaceRepository dbWorkspaceRepository(NamedParameterJdbcTemplate template, WorkspaceFactory factory) {
+        return new DBWorkspaceRepository(template, factory);
     }
 
 }
