@@ -7,6 +7,7 @@ import com.jbudgets.widget.Widget;
 import com.jbudgets.widget.WidgetFor;
 import com.jbudgets.widget.adapter.WidgetPurpose;
 import com.vaadin.flow.component.Component;
+import com.vaadin.flow.component.html.H1;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import jakarta.inject.Inject;
 
@@ -35,6 +36,7 @@ public class BudgetsDashboardWidget implements Widget {
     }
 
     private void layout() {
+        layout.add(new H1("Budgets"));
 
     }
 

@@ -1,7 +1,5 @@
 package com.jbudgets.domain.user;
 
-import com.jbudgets.domain.workspace.WorkspaceId;
-
 public class UserId {
     private final Integer value;
     private UserId(Integer value) {

@@ -1,7 +1,5 @@
 package com.jbudgets.domain.workspace.budget;
 
-import com.jbudgets.domain.workspace.WorkspaceId;
-
 public class BudgetId {
     private final Integer value;
     private BudgetId(Integer value) {

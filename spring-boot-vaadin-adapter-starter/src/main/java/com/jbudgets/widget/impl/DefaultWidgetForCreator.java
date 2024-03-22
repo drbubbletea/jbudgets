@@ -7,19 +7,14 @@ import com.jbudgets.widget.WidgetAdaptException;
 import com.jbudgets.widget.WidgetForCreator;
 import com.jbudgets.widget.adapter.WidgetPurpose;
 import jakarta.inject.Inject;
-import org.springframework.beans.factory.config.AutowireCapableBeanFactory;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.GenericApplicationContext;
 import org.springframework.core.GenericTypeResolver;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Constructor;
-import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Type;
 import java.lang.reflect.TypeVariable;
 import java.util.Map;
-
-import static org.springframework.beans.factory.config.AutowireCapableBeanFactory.AUTOWIRE_CONSTRUCTOR;
 
 public class DefaultWidgetForCreator implements WidgetForCreator {
 

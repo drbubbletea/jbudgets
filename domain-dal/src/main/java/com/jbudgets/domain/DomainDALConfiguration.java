@@ -8,10 +8,8 @@ import com.jbudgets.domain.workspace.impl.DBWorkspaceDAL;
 import com.jbudgets.domain.workspace.impl.DBWorkspaceRepository;
 import com.jbudgets.domain.workspace.transaction.impl.DBTransactionDAL;
 import com.jbudgets.domain.workspace.transaction.impl.DBTransactionRepository;
-import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Scope;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 
 @Configuration

@@ -1,7 +1,5 @@
 package com.jbudgets.domain.workspace.transaction;
 
-import com.jbudgets.domain.workspace.WorkspaceId;
-
 public class TransactionId {
     private final Integer value;
     private TransactionId(Integer value) {

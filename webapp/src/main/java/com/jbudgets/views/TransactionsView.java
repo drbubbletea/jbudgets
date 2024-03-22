@@ -3,6 +3,7 @@ package com.jbudgets.views;
 import com.jbudgets.MainLayout;
 import com.jbudgets.domain.user.CurrentUserProvider;
 import com.jbudgets.domain.user.User;
+import com.jbudgets.domain.workspace.transaction.TransactionRepository;
 import com.jbudgets.widget.Widget;
 import com.jbudgets.widget.adapter.WidgetAdapter;
 import com.jbudgets.widget.adapter.WidgetPurpose;
@@ -20,13 +21,11 @@ import jakarta.inject.Inject;
 public class TransactionsView extends Composite<VerticalLayout> {
 
     @Inject
-    public TransactionsView(CurrentUserProvider userProvider, WidgetAdapter adapter) {
+    public TransactionsView(TransactionRepository transactionRepository, WidgetAdapter adapter) {
         getContent().setWidth("100%");
         getContent().getStyle().set("flex-grow", "1");
 
-        User user = userProvider.get();
-
-        Widget widget = adapter.adapt(user, WidgetPurpose.VIEW).get();
+        Widget widget = adapter.adapt(transactionRepository, WidgetPurpose.DEFAULT).get();
         getContent().add(widget.get());
     }
 }

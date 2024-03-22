@@ -1,6 +1,5 @@
 package com.jbudgets.widget.transaction;
 
-import com.jbudgets.domain.workspace.budget.BudgetRepository;
 import com.jbudgets.domain.workspace.transaction.TransactionRepository;
 import com.jbudgets.widget.Purpose;
 import com.jbudgets.widget.Source;
@@ -8,6 +7,7 @@ import com.jbudgets.widget.Widget;
 import com.jbudgets.widget.WidgetFor;
 import com.jbudgets.widget.adapter.WidgetPurpose;
 import com.vaadin.flow.component.Component;
+import com.vaadin.flow.component.html.H1;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import jakarta.inject.Inject;
 
@@ -36,7 +36,7 @@ public class TransactionDashboardWidget implements Widget {
     }
 
     private void layout() {
-
+        layout.add(new H1("Transactions"));
     }
 
 
