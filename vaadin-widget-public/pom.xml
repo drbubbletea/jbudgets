@@ -31,6 +31,10 @@
             <artifactId>vaadin-core</artifactId>
         </dependency>
         <dependency>
+            <groupId>org.parttio</groupId>
+            <artifactId>line-awesome</artifactId>
+        </dependency>
+        <dependency>
             <groupId>com.jbudgets</groupId>
             <artifactId>domain</artifactId>
             <version>0.0.1-SNAPSHOT</version>
