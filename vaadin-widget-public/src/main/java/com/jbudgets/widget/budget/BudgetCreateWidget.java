@@ -1,16 +1,8 @@
 package com.jbudgets.widget.budget;
 
 import com.jbudgets.domain.workspace.budget.BudgetRepository;
-import com.jbudgets.event.VaadinComponentEventBus;
-import com.jbudgets.event.impl.CancelEvent;
 import com.jbudgets.widget.PublicWidgetFactory;
-import com.jbudgets.widget.Source;
-import com.jbudgets.widget.Widget;
-import com.jbudgets.widget.WidgetFor;
-import com.jbudgets.widget.adapter.WidgetPurpose;
 import com.vaadin.flow.component.Component;
-import com.vaadin.flow.component.ComponentEventBus;
-import com.vaadin.flow.component.Text;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.button.ButtonVariant;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
@@ -18,7 +10,12 @@ import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.data.binder.Binder;
 import com.vaadin.flow.data.validator.StringLengthValidator;
 import jakarta.inject.Inject;
-import org.vaadin.lineawesome.LineAwesomeIcon;
+import net.timeboxing.spring.vaadin.event.VaadinComponentEventBus;
+import net.timeboxing.spring.vaadin.event.impl.CancelEvent;
+import net.timeboxing.spring.vaadin.widget.Source;
+import net.timeboxing.spring.vaadin.widget.Widget;
+import net.timeboxing.spring.vaadin.widget.WidgetFor;
+import net.timeboxing.spring.vaadin.widget.adapter.WidgetPurpose;
 
 
 @WidgetFor(forClass = BudgetRepository.class, purpose = WidgetPurpose.CREATE)

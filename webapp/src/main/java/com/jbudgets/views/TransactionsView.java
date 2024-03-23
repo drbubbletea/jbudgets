@@ -1,12 +1,7 @@
 package com.jbudgets.views;
 
 import com.jbudgets.MainLayout;
-import com.jbudgets.domain.user.CurrentUserProvider;
-import com.jbudgets.domain.user.User;
 import com.jbudgets.domain.workspace.transaction.TransactionRepository;
-import com.jbudgets.widget.Widget;
-import com.jbudgets.widget.adapter.WidgetAdapter;
-import com.jbudgets.widget.adapter.WidgetPurpose;
 import com.vaadin.flow.component.Composite;
 import com.vaadin.flow.component.dependency.Uses;
 import com.vaadin.flow.component.icon.Icon;
@@ -14,6 +9,9 @@ import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.router.RouteAlias;
 import jakarta.inject.Inject;
+import net.timeboxing.spring.vaadin.widget.Widget;
+import net.timeboxing.spring.vaadin.widget.adapter.WidgetAdapter;
+import net.timeboxing.spring.vaadin.widget.adapter.WidgetPurpose;
 
 @Route(value = "transactions", layout = MainLayout.class)
 @RouteAlias(value = "transactions", layout = MainLayout.class)

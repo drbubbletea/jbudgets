@@ -23,7 +23,6 @@
 
   <modules>
     <module>webapp</module>
-    <module>spring-boot-vaadin-adapter-starter</module>
     <module>domain</module>
     <module>vaadin-widget-public</module>
       <module>domain-dal</module>
@@ -37,6 +36,11 @@
 
   <dependencyManagement>
     <dependencies>
+      <dependency>
+        <groupId>net.timeboxing.spring</groupId>
+        <artifactId>spring-boot-lib-vaadin</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+      </dependency>
       <dependency>
         <groupId>jakarta.inject</groupId>
         <artifactId>jakarta.inject-api</artifactId>

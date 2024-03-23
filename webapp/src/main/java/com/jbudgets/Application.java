@@ -13,7 +13,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * and some desktop browsers.
  *
  */
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = {"com.jbudgets", "net.timeboxing.spring"})
 @Theme(value = "my-app", variant = Lumo.DARK)
 public class Application implements AppShellConfigurator {
 

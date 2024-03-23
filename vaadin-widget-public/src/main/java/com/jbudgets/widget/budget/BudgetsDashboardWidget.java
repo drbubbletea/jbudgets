@@ -1,23 +1,22 @@
 package com.jbudgets.widget.budget;
 
 import com.jbudgets.domain.workspace.budget.BudgetRepository;
-import com.jbudgets.event.ListenerRegistrations;
-import com.jbudgets.event.VaadinComponentEventBus;
-import com.jbudgets.event.impl.CancelEvent;
-import com.jbudgets.event.impl.DefaultListenerRegistrations;
-import com.jbudgets.widget.Purpose;
-import com.jbudgets.widget.Source;
-import com.jbudgets.widget.Widget;
-import com.jbudgets.widget.WidgetFor;
-import com.jbudgets.widget.adapter.WidgetAdapter;
-import com.jbudgets.widget.adapter.WidgetPurpose;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.button.ButtonVariant;
-import com.vaadin.flow.component.dialog.Dialog;
 import com.vaadin.flow.component.html.H1;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import jakarta.inject.Inject;
+import net.timeboxing.spring.vaadin.event.ListenerRegistrations;
+import net.timeboxing.spring.vaadin.event.VaadinComponentEventBus;
+import net.timeboxing.spring.vaadin.event.impl.CancelEvent;
+import net.timeboxing.spring.vaadin.event.impl.DefaultListenerRegistrations;
+import net.timeboxing.spring.vaadin.widget.Purpose;
+import net.timeboxing.spring.vaadin.widget.Source;
+import net.timeboxing.spring.vaadin.widget.Widget;
+import net.timeboxing.spring.vaadin.widget.WidgetFor;
+import net.timeboxing.spring.vaadin.widget.adapter.WidgetAdapter;
+import net.timeboxing.spring.vaadin.widget.adapter.WidgetPurpose;
 import org.vaadin.lineawesome.LineAwesomeIcon;
 
 import java.util.ArrayList;

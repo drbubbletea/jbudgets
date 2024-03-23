@@ -1,15 +1,15 @@
 package com.jbudgets.widget.transaction;
 
 import com.jbudgets.domain.workspace.transaction.TransactionRepository;
-import com.jbudgets.widget.Purpose;
-import com.jbudgets.widget.Source;
-import com.jbudgets.widget.Widget;
-import com.jbudgets.widget.WidgetFor;
-import com.jbudgets.widget.adapter.WidgetPurpose;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.html.H1;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import jakarta.inject.Inject;
+import net.timeboxing.spring.vaadin.widget.Purpose;
+import net.timeboxing.spring.vaadin.widget.Source;
+import net.timeboxing.spring.vaadin.widget.Widget;
+import net.timeboxing.spring.vaadin.widget.WidgetFor;
+import net.timeboxing.spring.vaadin.widget.adapter.WidgetPurpose;
 
 @WidgetFor(forClass = TransactionRepository.class, purpose = WidgetPurpose.DEFAULT)
 public class TransactionDashboardWidget implements Widget {

@@ -40,10 +40,8 @@
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>
-            <groupId>com.jbudgets</groupId>
-            <artifactId>spring-boot-vaadin-adapter-starter</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-            <scope>provided</scope>
+            <groupId>net.timeboxing.spring</groupId>
+            <artifactId>spring-boot-lib-vaadin</artifactId>
         </dependency>
     </dependencies>
 </project>

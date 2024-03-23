@@ -2,15 +2,15 @@ package com.jbudgets.widget.user;
 
 import com.jbudgets.domain.TestService;
 import com.jbudgets.domain.user.User;
-import com.jbudgets.widget.Purpose;
-import com.jbudgets.widget.Source;
-import com.jbudgets.widget.Widget;
-import com.jbudgets.widget.WidgetFor;
-import com.jbudgets.widget.adapter.WidgetPurpose;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.html.H3;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import jakarta.inject.Inject;
+import net.timeboxing.spring.vaadin.widget.Purpose;
+import net.timeboxing.spring.vaadin.widget.Source;
+import net.timeboxing.spring.vaadin.widget.Widget;
+import net.timeboxing.spring.vaadin.widget.WidgetFor;
+import net.timeboxing.spring.vaadin.widget.adapter.WidgetPurpose;
 
 @WidgetFor(forClass = User.class, purpose = WidgetPurpose.VIEW)
 public class UserViewWidget implements Widget {
