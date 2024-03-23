@@ -36,14 +36,4 @@ public class DefaultVaadinComponentEventBus implements VaadinComponentEventBus {
             }
         }
     }
-
-    public int analyzeAndCount() {
-        for (Map.Entry<WeakReference<VaadinComponentEventListener<?>>, Class<? extends ComponentEvent>> entry: listeners.entrySet()) {
-            VaadinComponentEventListener listener = entry.getKey().get();
-            if (null == listener) {
-                listeners.remove(entry.getKey());
-            }
-        }
-        return listeners.size();
-    }
 }
