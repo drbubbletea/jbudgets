@@ -8,6 +8,9 @@ import com.jbudgets.domain.user.UserId;
 import com.jbudgets.domain.workspace.CurrentWorkspaceProvider;
 import com.jbudgets.domain.workspace.Workspace;
 import com.jbudgets.domain.workspace.WorkspaceId;
+import com.jbudgets.event.VaadinComponentEventBus;
+import com.jbudgets.event.impl.DefaultVaadinComponentEventBus;
+import com.vaadin.flow.spring.annotation.UIScope;
 import com.vaadin.flow.spring.annotation.VaadinSessionScope;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -36,5 +39,11 @@ public class WebappConfiguration {
         CurrentWorkspaceProvider provider = new CurrentWorkspaceProvider();
         provider.set(workspace);
         return provider;
+    }
+
+    @Bean
+    @VaadinSessionScope
+    public VaadinComponentEventBus vaadinComponentEventBus() {
+        return new DefaultVaadinComponentEventBus();
     }
 }
